@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: 'PULSEBOARD — Personal Fitness OS',
   description: 'Offline-first personal health and fitness dashboard.',
   manifest: '/manifest.json',
+  icons: { apple: '/icon.svg' },
+  appleWebApp: { capable: true, title: 'Pulseboard', statusBarStyle: 'black-translucent' },
 };
 
 export const viewport: Viewport = { themeColor: '#101412', viewportFit: 'cover' };

@@ -29,4 +29,8 @@ The app uses no backend. User records are stored in `localStorage`, authenticati
 
 ## Included program
 
-The supplied V-Taper / small-looking-waist weekly split is bundled into the application and available offline. Workout set logging, daily habits, sleep, protein, water, profile settings, and JSON export persist locally.
+The supplied V-Taper / small-looking-waist weekly split is bundled into the application and available offline. Workout set logging, daily habits, sleep hours, protein, water, profile settings, compressed profile photos, gamification levels, achievements, streaks, last-workout history, and JSON export persist locally.
+
+## Mobile installation
+
+On iPhone Safari, open the deployed site, tap **Share**, then choose **Add to Home Screen**. The app uses a standalone PWA manifest, safe-area layout, icon metadata, and a service worker so the application shell remains available offline. Weather is optional: allow location from the Weather Window card when online; the last successful result is cached locally.
