@@ -1,8 +1,7 @@
-const CACHE = 'hasans-space-v2';
-const APP_SHELL = ['/', '/manifest.json', '/icon.svg'];
+const CACHE = 'hasans-space-v3';
 
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
+  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll([self.registration.scope, new URL('manifest.json', self.registration.scope).toString(), new URL('icon.svg', self.registration.scope).toString()])).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', event => {
@@ -15,5 +14,5 @@ self.addEventListener('fetch', event => {
     const copy = response.clone();
     caches.open(CACHE).then(cache => cache.put(event.request, copy));
     return response;
-  }).catch(() => caches.match('/'))));
+  }).catch(() => caches.match(self.registration.scope))));
 });
