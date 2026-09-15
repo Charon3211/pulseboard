@@ -1,4 +1,4 @@
-# Pulseboard
+# Hasan's Space
 
 Offline-first personal health and fitness dashboard built with Next.js static export.
 
