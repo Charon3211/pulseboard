@@ -1,4 +1,4 @@
-const CACHE = 'hasans-space-v4';
+const CACHE = 'hasans-space-v5';
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll([self.registration.scope, new URL('manifest.json', self.registration.scope).toString(), new URL('icon.svg', self.registration.scope).toString()])).then(() => self.skipWaiting()));
