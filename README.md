@@ -1,6 +1,6 @@
-# Hasan's Space
+# Hasan's Space — Gym & Workout OS
 
-Offline-first personal health and fitness dashboard built with Next.js static export.
+Offline-first personal bodybuilding and gym workout tracker built with Next.js static export.
 
 ## Run locally
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000` and unlock with `coco1513`.
+Open `http://localhost:3000` and unlock with `coco1513` (or customize/remove the passcode in Settings).
 
 ## Production build
 
@@ -19,22 +19,36 @@ npm run build
 
 The static site is emitted to `out/`.
 
-## GitHub Pages
+## Key Features (100% Gym Workout Focused)
 
-1. Push the repository to GitHub, using `main` as the deployment branch.
-2. In repository **Settings → Pages**, choose **GitHub Actions** as the source.
-3. Push to `main`; `.github/workflows/deploy.yml` builds and deploys the `out/` directory.
-
-The app uses no backend. Normalized user records are stored in `localStorage`, authentication session state is stored in `sessionStorage`, and the application shell is cached by `public/sw.js`. The client-side lock is a local convenience gate, not server-grade security. Weekly review notifications work while the app is open; background push requires a push service.
-
-## Included program
-
-The supplied V-Taper / small-looking-waist weekly split is bundled into the application and available offline. Workout set logging, daily habits, sleep hours, protein targets, water, profile settings, compressed profile photos, gamification levels, achievements, streaks, last-workout history, dated weight/waist measurements, and JSON backup/restore persist locally.
-
-## Mobile installation
-
-On iPhone Safari, open the deployed site, tap **Share**, then choose **Add to Home Screen**. The app uses a standalone PWA manifest, safe-area layout, icon metadata, and a service worker so the application shell remains available offline. Weather is optional: allow location from the Weather Window card when online; the last successful result is cached locally.
-
-## Data backup and restore
-
-Use **Profile → Export JSON** to download a complete local backup. Use **Profile → Import JSON** to restore it; the app validates and migrates the file before replacing local data, and failed imports leave existing data untouched. Legacy sleep-minute data is migrated to sleep hours, and missing fields receive safe defaults.
+- **Dedicated Gym Journal & Logger**:
+  - Log Weight (kg/lbs) and Reps for each set with thumb-friendly steppers.
+  - Previous performance memory: displays previous session's weight and reps on each exercise so you can achieve progressive overload.
+  - One-tap checkmark buttons to log sets.
+  - Add or remove sets dynamically for any exercise.
+  - Persistent form cues and machine notes for each exercise.
+- **Built-in Rest Timer**:
+  - Floating rest timer widget with countdown display, circular progress indicator, and sound chimes.
+  - Automatically triggers when you finish a set.
+  - Quick presets (30s, 45s, 60s, 90s, 120s, 180s) and +30s button.
+- **Exercise Library & Split Customizer**:
+  - Full V-Taper / Aesthetic weekly split included offline (Mon–Sun).
+  - Filter exercises by target muscle group (Chest, Back, Legs, Shoulders, Arms, Core, Cardio).
+  - Add custom exercises to any workout day.
+- **Gym Performance Analytics**:
+  - Total Volume load (tonnage lifted: `weight × reps`).
+  - Muscle group volume distribution bars.
+  - Personal Record (PR) tracker with estimated 1-Rep Max (1RM) calculations.
+  - Weekly workout consistency graph.
+  - Body composition trends (Weight & Waist) with interactive SVG charts.
+- **Gamification**:
+  - Pure gym XP: rewarded for completed workouts, sets, volume lifted, and workout streaks.
+  - Lifter ranks: *Iron Novice* → *Apprentice Lifter* → *Consistent Athlete* → *Iron Warrior* → *Gym Beast* → *Titan Lifter* → *Iron Legend*.
+  - Gym achievements (First Session, The Centurion, Ton Club, Iron Streak, Heavy Duty).
+- **Settings & Preferences**:
+  - Weight unit toggle: Kilograms (kg) vs Pounds (lbs).
+  - Configurable default rest timer duration.
+  - Offline Web Audio sound effects (synthesized beeps and chimes).
+  - Passcode lock customization (enable, change, or remove).
+  - Full local JSON export and import backups.
+  - Standalone PWA manifest and offline service worker.
